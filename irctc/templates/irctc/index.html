@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+{% load rest_framework %}
+
+
+<form  class="col-sm-offset-2 col-sm-10" style="width: 30rem;" method="post" novalidate>
+
+    <h3>SERACH YOUR TICKET</h3>
+    {% csrf_token %}
+    {% render_form serializer template_pack='rest_framework/vertical' %}
+    <button type="submit" >search</button>
+</form>
